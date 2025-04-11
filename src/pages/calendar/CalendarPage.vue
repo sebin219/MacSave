@@ -329,7 +329,7 @@ body,
 }
 
 .summary-item:first-child {
-  color: #f2f2f2;
+  color: #1c1b1b;
   font-weight: 600;
 }
 

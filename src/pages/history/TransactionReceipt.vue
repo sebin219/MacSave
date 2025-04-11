@@ -76,9 +76,9 @@ const emitClose = () => {
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 20px;
-  width: 250px;
+  width: 300px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  height: 600px;
+  height: 500px;
 }
 .receipt-container img {
   max-width: 100%;
@@ -119,7 +119,7 @@ h2 {
 }
 
 .income {
-  color: blue;
+  color: rgb(24, 181, 239);
   font-weight: bold;
 }
 
@@ -137,11 +137,12 @@ h2 {
   box-shadow: 2px 0 6px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   background-color: #eee;
+  width: 150px;
 }
 img {
   max-width: 100%;
   height: auto;
-  padding: 90% 0px;
+  padding: 50% 0px;
 }
 .close-btn {
   position: absolute;

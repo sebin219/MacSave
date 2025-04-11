@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from 'vue'
 import { useBurgerModeStore } from '@/stores/burgerMode'
+import { useRouter } from 'vue-router'
+const router = useRouter()
 const burgerStore = useBurgerModeStore()
 
 const today = ref(
@@ -17,13 +19,16 @@ const menuItems = [
   { path: '/stats', label: 'Analysis', hoverLabel: '분석' },
   { path: '/settings', label: 'Setting', hoverLabel: '설정' },
 ]
+function goHistory() {
+  router.push('/history')
+}
 </script>
 
 <template>
   <header class="app-header">
     <!-- 왼쪽: 로고 -->
     <div class="left">
-      <img class="logo" src="/logo.png" alt="MacSave 로고" />
+      <img class="logo" src="/logo.png" alt="MacSave 로고" @click="goHistory" />
     </div>
 
     <!-- 오른쪽: 메뉴 + 날짜 묶음 -->
@@ -65,6 +70,7 @@ const menuItems = [
 .logo {
   width: 70px;
   height: auto;
+  cursor: pointer;
 }
 
 /* 오른쪽 영역 전체 (메뉴 + 날짜) */

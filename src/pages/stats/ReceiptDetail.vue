@@ -79,6 +79,9 @@ const formattedTotal = computed(() => {
   list-style: none;
   padding: 0;
   margin: 0;
+  overflow-y: auto;
+  flex-grow: 1;
+  max-height: 100%;
 }
 .receipt-item {
   display: flex;

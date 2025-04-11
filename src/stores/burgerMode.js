@@ -1,21 +1,26 @@
 import { defineStore } from 'pinia'
 
+// burgerMode.js
 export const useBurgerModeStore = defineStore('burgerMode', {
   state: () => ({
     isBurgerMode: false,
     burgerPrice: 5500,
   }),
-  getters: {
-    burgerFormat: state => amount => {
-      const count = Math.floor(amount / state.burgerPrice)
-      if (count === 0) return '0'
-      if (count <= 5) return '🍔'.repeat(count)
-      return `${count.toLocaleString()} x 🍔`
-    },
-  },
   actions: {
     toggleMode() {
       this.isBurgerMode = !this.isBurgerMode
+    },
+    burgerFormat(amount) {
+      const absAmount = Math.abs(amount)
+      const count = Math.floor(absAmount / this.burgerPrice)
+
+      if (count === 0) return '0'
+      if (count <= 5) {
+        return amount < 0 ? '-' + '🍔'.repeat(count) : '🍔'.repeat(count)
+      }
+      return amount < 0
+        ? `- ${count.toLocaleString()} x 🍔`
+        : `${count.toLocaleString()} x 🍔`
     },
   },
 })

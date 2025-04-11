@@ -3,7 +3,7 @@
     <div v-if="!showModal && !showEditModal">
       <!-- 날짜 및 필터 -->
       <div class="header-row">
-        <div class="title">
+        <div class="title" style="margin-bottom: 20px">
           <i class="fa-solid fa-money-check-dollar"></i>
           <span>Expense</span>
         </div>
@@ -361,10 +361,12 @@ onMounted(refreshData)
 }
 
 .income {
-  color: rgb(1, 147, 200);
+  color: rgb(24, 181, 239);
+  font-weight: bold;
 }
 .expense {
-  color: #ff4545;
+  color: #ff1900;
+  font-weight: bold;
 }
 
 .history-table {
@@ -376,17 +378,18 @@ onMounted(refreshData)
   font-size: 16px;
   font-weight: lighter;
   align-items: center;
-  background-color: #1f1f1f;
+  background-color: rgba(205, 205, 205, 0.6);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-  color: white;
+  color: black;
 }
 
 .history-table tbody {
   font-size: 16px;
   text-align: center;
-  background-color: #1f1f1f;
+  background-color: rgba(0, 0, 0, 0.1);
   color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  /* font-weight: bold; */
 }
 
 .history-table th,

@@ -40,8 +40,8 @@ import HeaderContainer from '@/components/HeaderContainer.vue'
 /* 배경 로고 */
 .content::before {
   content: '';
-  position: absolute;
-  top: 50%; /* .content 기준으로 중앙 */
+  position: fixed;
+  top: 60%; /* .content 기준으로 중앙 */
   left: 50%;
   transform: translate(-50%, -50%);
   background-image: url('/logo.png');
